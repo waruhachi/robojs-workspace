@@ -1,0 +1,37 @@
+{
+    "name": "Robo.js",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": { 
+        "ghcr.io/devcontainers/features/node:latest": {},
+        "ghcr.io/waruhachi/features/bun:latest": {}
+    },
+    "overrideFeatureInstallOrder": [
+        "ghcr.io/devcontainers/features/node",
+        "ghcr.io/waruhachi/features/bun"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "kamikillerto.vscode-colorize",
+                "wallabyjs.console-ninja",
+                "usernamehw.errorlens",
+                "dbaeumer.vscode-eslint",
+                "github.copilot",
+                "github.copilot-chat",
+                "github.vscode-pull-request-github",
+                "wix.vscode-import-cost",
+                "visualstudioexptteam.vscodeintellicode",
+                "visualstudioexptteam.intellicode-api-usage-examples",
+                "esbenp.prettier-vscode",
+                "yoavbls.pretty-ts-errors"
+            ]
+        }
+    },
+    "forwardPorts": [3000],
+    "portsAttributes": {
+        "3000": {
+            "label": "Robo.js"
+        }
+    },
+    "postAttachCommand": "[ -f package.json ] && exit 0 || (npm install -g create-robo && clear && npx create-robo)"
+}
