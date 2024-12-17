@@ -33,5 +33,5 @@
             "label": "Robo.js"
         }
     },
-    "postAttachCommand": "[ -f package.json ] && (exit 0) || (npx create-robo --yes)"
+    "postAttachCommand": "(pnpm setup && source /home/vscode/.bashrc ) && [ -f package.json ] && (exit 0) || (npm install -g create-robo && clear && npx create-robo)"
 }
