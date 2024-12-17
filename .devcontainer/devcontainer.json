@@ -33,5 +33,5 @@
             "label": "Robo.js"
         }
     },
-    "postAttachCommand": "[ -f package.json ] && exit 0 || (npm install -g create-robo && clear && npx create-robo)"
+    "postAttachCommand": "[ -f package.json ] && (exit 0) || (npx create-robo --yes)"
 }
